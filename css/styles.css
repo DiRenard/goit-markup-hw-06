@@ -91,7 +91,7 @@ ul {
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-  height: 56px; 
+  height: 56px; /* Базова висота для мобільних */
   display: flex;
   align-items: center;
 }
@@ -217,18 +217,15 @@ ul {
     margin-right: 332px; 
   }
 
-  .contact-info {
-    display: flex;
-    align-items: center; 
-  }
+ 
 
   .contact-list {
-    flex-direction: row; 
-    gap: 24px; 
+    flex-direction: column; 
+    gap: 4px; 
   }
 
   .contact-list .contact-link {
-    padding: 24px 0; 
+    padding: 0; 
     font-size: 16px; 
     line-height: 1.5; 
     letter-spacing: 0.02em; 
@@ -430,17 +427,12 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--light-slate-color); 
+    border: 1px solid var(--light-color);
     border-radius: 4px;
     width: 264px;
     height: 112px;
-    background-color: var(--light-color); 
+    background-color: var(--light-color);
     margin-bottom: 8px;
-  }
-
-  
-  .features-icon-container svg {
-    fill: var(--light-slate-color); 
   }
 
   .features-title {
