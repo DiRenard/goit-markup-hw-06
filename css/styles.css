@@ -237,7 +237,7 @@ ul {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-background-mobile.jpg);
+    url("../images/hero-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -255,7 +255,7 @@ ul {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero-background-mobile@2x.jpg);
+      url("../images/hero-background-mobile@2x.jpg");
   }
 }
 
@@ -301,7 +301,7 @@ ul {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero-background-tablet.jpg);
+      url("../images/hero-background-tablet.jpg");
   }
 
   @media (min-resolution: 192dpi) and (max-width: 1157px),
@@ -312,7 +312,7 @@ ul {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero-background-tablet@2x.jpg);
+        url("../images/hero-background-tablet@2x.jpg");
     }
   }
 
@@ -331,7 +331,7 @@ ul {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero-background.jpg);
+      url("../images/hero-background.jpg");
   }
 
   @media (min-resolution: 192dpi), (min-resolution: 2dppx), (min-device-pixel-ratio: 2) {
@@ -340,7 +340,7 @@ ul {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero-background-desktop@2x.jpg);
+        url("../images/hero-background-desktop@2x.jpg");
     }
   }
 }
@@ -350,13 +350,13 @@ ul {
 }
 
 .features-icon {
-  fill: #2E2F42;
+  fill: #2e2f42; 
   width: 64px;
   height: 64px;
 }
 
 .clock-line {
-  fill: #4D5AE5;
+  fill: #4d5ae5;
 }
 
 .astronaut-icon {
@@ -436,11 +436,11 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #8E8F99;
+    border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 264px;
     height: 112px;
-    background-color: #F4F4FD;
+    background-color: #f4f4fd;
     margin-bottom: 8px;
   }
 
@@ -456,6 +456,7 @@ ul {
   background: var(--light-color);
   padding: 96px 0;
 }
+
 .team-title {
   color: var(--dark-color);
   font-size: 36px;
@@ -1174,7 +1175,7 @@ ul {
 .mobile-menu.is-open {
   transform: translateX(0);
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: auto; 
 }
 
 .mobile-menu-close-btn {
