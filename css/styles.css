@@ -74,7 +74,6 @@ ul {
   }
 }
 
-/* Блок: Візуально прихований елемент */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -144,18 +143,19 @@ ul {
   align-items: center;
   justify-content: center;
   line-height: 0;
+  transition: visibility 250ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+.menu-toggle-label.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .menu-toggle-icon {
   fill: var(--dark-color);
   width: 24px;
   height: 24px;
-}
-
-#mobile-menu-toggle:checked + .menu-toggle-label {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
 }
 
 /* Блок: Медіазапити для заголовка */
@@ -978,28 +978,23 @@ ul {
   height: 100%;
   background-color: var(--white-background-color);
   z-index: 999;
-  transform: translateX(-100%);
+  transform: translateX(-100%); 
   transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 72px 35px 40px 35px;
   opacity: 0;
-  pointer-events: none;
+  pointer-events: none; 
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-#mobile-menu-toggle:checked ~ .mobile-menu-container {
-  transform: translateX(0);
+/* Стиль для відкритого мобільного меню */
+.mobile-menu-container.is-open {
+  transform: translateX(0); 
   opacity: 1;
-  pointer-events: auto;
-}
-
-#mobile-menu-toggle:checked + .menu-toggle-label {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+  pointer-events: auto; 
 }
 
 .mobile-menu-close-label {
@@ -1153,7 +1148,6 @@ ul {
 
 @media (min-width: 768px) {
   .mobile-menu-container,
-  #mobile-menu-toggle,
   .menu-toggle-label {
     display: none;
   }
@@ -1176,43 +1170,45 @@ ul {
   z-index: 1000;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-  width: 288px;
-  min-height: 623px;
-  background-color: var(--modal-window-color);
-  border-radius: 4px;
-  padding: 72px 24px 24px 24px; 
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (min-width: 768px) {
-  .modal {
-    width: 408px; 
-    min-height: 584px; 
-    padding: 24px; 
-  }
-}
-
-#modal-open-toggle:checked ~ .backdrop {
+/* Стиль для відкритого модального вікна */
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-#modal-open-toggle:checked ~ .backdrop .modal {
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5); 
+  width: 288px;
+  min-height: 623px;
+  background-color: var(--modal-window-color);
+  border-radius: 4px;
+  padding: 72px 24px 24px 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.backdrop.is-open .modal {
   transform: translate(-50%, -50%) scale(1);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 24px;
+  }
 }
 
 .modal-close-btn {
   position: absolute;
-  top: 24px; 
-  right: 24px; 
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -1229,8 +1225,8 @@ ul {
 
 @media (min-width: 768px) {
   .modal-close-btn {
-    top: 8px; 
-    right: 8px; 
+    top: 8px;
+    right: 8px;
   }
 }
 
@@ -1261,7 +1257,7 @@ ul {
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--dark-color);
-  margin-top: 0; 
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
@@ -1346,10 +1342,10 @@ ul {
 }
 
 .check-text {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   flex-wrap: wrap; 
-  gap: 8px; 
+  gap: 8px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1357,7 +1353,7 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate-color);
-  width: 100%; 
+  width: 100%;
   height: auto;
 }
 
