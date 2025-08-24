@@ -74,7 +74,7 @@ ul {
   }
 }
 
-
+/* Блок: Візуально прихований елемент */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1006,12 +1006,12 @@ ul {
   position: absolute;
   top: 24px;
   right: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--cornflower-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
@@ -1091,13 +1091,20 @@ ul {
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
+  width: 193px;
+  height: 24px;
+  overflow: hidden;
 }
 
 .mobile-contact-link.primary-phone {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   color: var(--primary-brand-color);
+  width: 193px;
+  height: 24px;
+  overflow: hidden;
 }
 
 .mobile-contact-link.primary-phone:hover,
@@ -1178,10 +1185,18 @@ ul {
   min-height: 623px;
   background-color: var(--modal-window-color);
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 24px 24px 24px; 
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 408px; 
+    min-height: 584px; 
+    padding: 24px; 
+  }
 }
 
 #modal-open-toggle:checked ~ .backdrop {
@@ -1196,8 +1211,8 @@ ul {
 
 .modal-close-btn {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 24px; 
+  right: 24px; 
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -1210,6 +1225,13 @@ ul {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .modal-close-btn {
+    top: 8px; 
+    right: 8px; 
+  }
 }
 
 .modal-close-btn:hover,
@@ -1239,7 +1261,7 @@ ul {
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--dark-color);
-  margin-top: 36px;
+  margin-top: 0; 
   margin-bottom: 16px;
 }
 
@@ -1321,28 +1343,26 @@ ul {
 
 .modal-form-check {
   margin-bottom: 24px;
-  display: flex;
-  align-items: flex-start; 
 }
 
 .check-text {
-  display: flex;
+  display: flex; 
   align-items: center; 
   flex-wrap: wrap; 
-  gap: 4px; 
-  width: 231px; 
-  height: 31px; 
-  font-family: 'Roboto';
+  gap: 8px; 
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17; 
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate-color);
+  width: 100%; 
+  height: auto;
 }
 
 .custom-checkbox {
-  flex-shrink: 0; 
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1350,7 +1370,6 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 8px; 
   fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -1366,7 +1385,7 @@ ul {
 .privacy-link {
   color: var(--primary-brand-color);
   text-decoration: underline;
-  margin-left: 0; 
+  margin-left: 0;
 }
 
 .send-button {
@@ -1398,44 +1417,88 @@ ul {
   margin-left: 16px;
 }
 
-/* Блок: Медіазапити для модального вікна */
+/* Блок: Медіазапити для футера */
 @media (min-width: 768px) {
-  .modal {
-    width: 408px;
-    min-height: 584px;
-    padding: 24px;
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 72px 24px;
+    justify-content: flex-start;
   }
 
-  .modal-title {
-    font-size: 20px;
-    line-height: 1.2;
-    margin-top: 36px;
-    margin-bottom: 24px;
+  .footer-logo-wrapper {
+    align-items: flex-start;
+    width: 264px;
+    margin-right: 0;
   }
 
-  .modal-form-field {
-    margin-bottom: 8px;
+  .footer-logo-part {
+    color: var(--light-color);
   }
 
-  .comment-field {
-    margin-bottom: 16px;
+  .footer-text {
+    text-align: left;
+    margin-top: 16px;
   }
 
-  .modal-form-check {
-    margin-bottom: 24px;
-    align-items: center; 
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
+  .footer-social-media-wrapper {
+    align-items: flex-start;
+    margin-right: 0;
   }
 
-  .check-text {
-    flex-wrap: nowrap; 
-    width: auto;
-    height: auto;
+  .social-media-title {
+    text-align: left;
   }
-  .privacy-link {
-    margin-left: 4px;
+
+  .footer-subscribe-wrapper {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .subscribe-title {
+    text-align: left;
+  }
+
+  .subscribe-form {
+    flex-direction: row;
+  }
+
+  .subscribe-input {
+    width: 264px;
+  }
+
+  .subscribe-button {
+    margin: 0;
   }
 }
 
+@media (min-width: 1158px) {
+  .page-footer {
+    padding: 100px 0;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: flex-start;
+  }
+
+  .footer-logo-wrapper {
+    align-items: flex-start;
+    margin-right: 120px;
+    width: auto;
+  }
+
+  .footer-social-media-wrapper {
+    align-items: flex-start;
+    margin-right: 80px;
+    width: auto;
+  }
+
+  .footer-subscribe-wrapper {
+    align-items: flex-start;
+    width: auto;
+  }
+}
