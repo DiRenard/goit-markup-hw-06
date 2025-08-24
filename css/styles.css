@@ -130,7 +130,7 @@ ul {
 }
 
 .menu-toggle-btn {
-  display: none;
+  display: flex;
   background-color: transparent;
   border: none;
   padding: 0;
