@@ -1154,7 +1154,6 @@ ul {
 }
 
 /* Блок: Стилі для модального вікна */
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -1342,10 +1341,9 @@ ul {
 }
 
 .check-text {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap; 
-  gap: 8px;
+  align-items: center; 
+  flex-wrap: nowrap;   
+  gap: 16px;           
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1353,12 +1351,14 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate-color);
-  width: 100%;
+  width: auto;         
   height: auto;
 }
 
 .custom-checkbox {
-  flex-shrink: 0;
+  box-sizing: border-box;
+  margin-right: 8px;
+  flex-shrink: 0;      
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1382,6 +1382,7 @@ ul {
   color: var(--primary-brand-color);
   text-decoration: underline;
   margin-left: 0;
+  white-space: nowrap;
 }
 
 .send-button {
