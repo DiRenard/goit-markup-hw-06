@@ -173,7 +173,7 @@ ul {
   .main-nav {
     display: flex;
     align-items: center;
-    gap: 120px;
+    gap: 40px;
     margin-right: 0;
   }
 
@@ -222,16 +222,16 @@ ul {
 
   .contact-list {
     display: flex;
-    flex-direction: row;
-    gap: 24px;
+    flex-direction: column;
+    gap: 4px;
     align-items: center;
   }
 
   .contact-list .contact-link {
-    padding: 24px 0;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     color: var(--primary-text-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
