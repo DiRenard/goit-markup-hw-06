@@ -375,7 +375,7 @@ ul {
 
 @media (min-width: 1158px) {
   .hero-section {
-    max-width: 1158px;
+    max-width: 1440px;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0 auto;
@@ -1566,13 +1566,16 @@ height: auto;
 
 @media (min-width: 1158px) {
   .page-footer {
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 108px;
   }
 
   .footer-container {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 0;
+    padding: 0 15px;
     justify-content: flex-start;
   }
 
