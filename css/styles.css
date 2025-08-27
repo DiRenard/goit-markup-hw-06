@@ -276,7 +276,7 @@ ul {
 /* Блок: Секція "Герой" */
 .hero-section {
   background-color: var(--hero-background-color);
-  padding: 112px 0;
+  padding: 72px 52px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -286,7 +286,7 @@ ul {
   background-position: center;
   background-size: cover;
   max-width: 100%;
-  min-height: 432px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -306,7 +306,7 @@ ul {
 }
 
 .hero-title {
-  max-width: 320px;
+  max-width: 100%;
   color: var(--white-background-color);
   font-size: 30px;
   line-height: 1.11;
@@ -343,12 +343,14 @@ ul {
 @media (min-width: 768px) {
   .hero-section {
     padding: 112px 0;
-    min-height: 432px;
+    max-width: 768px;
+    margin: 0 auto;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/hero-background-tablet.jpg");
+
   }
 
   @media (min-resolution: 192dpi) and (max-width: 1157px),
@@ -373,7 +375,10 @@ ul {
 
 @media (min-width: 1158px) {
   .hero-section {
-    min-height: 600px;
+    max-width: 1158px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
     padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
