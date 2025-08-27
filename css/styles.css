@@ -990,6 +990,10 @@ height: auto;
     max-width: 264px;
   }
 
+ .social-list {
+    gap: 16px;
+  }
+
   .footer-subscribe-wrapper {
     align-items: flex-start;
     width: auto;
