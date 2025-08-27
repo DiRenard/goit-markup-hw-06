@@ -941,7 +941,7 @@ height: auto;
   }
   .footer-subscribe-wrapper {
     align-items: flex-start;
-    width: 100%;
+    width: 264px;
     margin-top: 0; 
   }
   .subscribe-title {
@@ -954,8 +954,9 @@ height: auto;
   .subscribe-input {
     width: 264px;
   }
+  
   .subscribe-button {
-    margin: 0;
+    margin: 264;
   }
 }
 
@@ -983,6 +984,10 @@ height: auto;
     align-items: flex-start;
     margin-right: 80px;
     width: auto;
+  }
+
+   .footer-text {
+    max-width: 264px;
   }
 
   .footer-subscribe-wrapper {
