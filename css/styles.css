@@ -602,8 +602,14 @@ ul {
   }
 
   .team-item {
-    width: calc((100% - 24px) / 2);
+    width: 264px;
   }
+
+  .team-item img {
+width: 100%;
+height: auto;
+  }
+
 }
 
 @media (min-width: 1158px) {
@@ -620,6 +626,7 @@ ul {
   .team-item {
     width: calc((100% - 72px) / 4);
   }
+
 }
 
 /* Блок: Секція "Наше Портфоліо" */
@@ -710,13 +717,20 @@ ul {
   .portfolio-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 72px 24px;
+    gap: 64px 24px;
     justify-content: center;
   }
 
+
   .portfolio-item {
-    width: calc((100% - 24px) / 2);
+    width: 356px;
   }
+
+  .team-item img {
+    width: 100%;
+    height: auto;
+  }
+  
 }
 
 @media (min-width: 1158px) {
