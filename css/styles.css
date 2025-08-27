@@ -1372,9 +1372,9 @@ height: auto;
 }
 
 .check-text {
-  align-items: center; 
-  flex-wrap: nowrap;   
-  gap: 16px;           
+  display: flex;
+  align-items: flex-start; 
+  flex-wrap: nowrap;             
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1384,11 +1384,10 @@ height: auto;
   color: var(--light-slate-color);
   width: auto;         
   height: auto;
+  gap: 8px;
 }
 
 .custom-checkbox {
-  box-sizing: border-box;
-  margin-right: 8px;
   flex-shrink: 0;      
   width: 16px;
   height: 16px;
@@ -1401,6 +1400,9 @@ height: auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.terms-text {
+  flex-grow: 1; 
 }
 
 .check-input:checked + .check-text .custom-checkbox {
