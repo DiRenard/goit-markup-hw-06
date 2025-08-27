@@ -423,7 +423,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 72px;
-  align-items: center;
 }
 
 .features-item {
