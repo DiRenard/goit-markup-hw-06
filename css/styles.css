@@ -1090,6 +1090,11 @@ height: auto;
   color: var(--dark-color);
 }
 
+.mobile-site-menu li:first-child .mobile-menu-link {
+  color: var(--primary-brand-color);
+}
+
+
 .mobile-menu-link:hover,
 .mobile-menu-link:focus,
 .mobile-menu-link.current:hover,
@@ -1212,7 +1217,7 @@ height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.5); 
+  transform: translate(-50%, -50%) scale(0.5);
   width: 288px;
   height: auto;
   min-height: auto;
@@ -1223,7 +1228,6 @@ height: auto;
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .backdrop.is-open .modal {
   transform: translate(-50%, -50%) scale(1);
@@ -1274,14 +1278,7 @@ height: auto;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 8px;
   height: 8px;
-  transform: scale(2.5);
-  transform-origin: center;
 }
-
-.mobile-menu-link.current {
-color: var(--primary-brand-color);
-}
-
 
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
@@ -1381,8 +1378,8 @@ color: var(--primary-brand-color);
 
 .check-text {
   display: flex;
-  align-items: flex-start; 
-  flex-wrap: nowrap;             
+  align-items: flex-start;
+  flex-wrap: nowrap;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1390,13 +1387,13 @@ color: var(--primary-brand-color);
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate-color);
-  width: auto;         
+  width: auto;
   height: auto;
   gap: 8px;
 }
 
 .custom-checkbox {
-  flex-shrink: 0;      
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1410,7 +1407,7 @@ color: var(--primary-brand-color);
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .terms-text {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .check-input:checked + .check-text .custom-checkbox {
